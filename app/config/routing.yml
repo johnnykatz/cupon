@@ -14,3 +14,7 @@ oferta:
     resource: "@OfertaBundle/Resources/config/routing.yml"
     prefix:   /
 
+p_paginas_estaticas:
+    resource: routing_paginas.yml
+    prefix: /pagina
+    defaults: { _controller: FrameworkBundle:Template:template }
