@@ -44,5 +44,7 @@ luego para generar los getters y setters $ php app/console doctrine:generate:ent
 limpiar la cache de produccion
 php app/console cache:clear --env=prod --no-debug
 
-pag 118
+Ejecutar comando en determinado entorno
+--env=prod  al final de cada comando. si no se pone nada se sobreentiende que se ejecuta en entorno dev
+pag 129 depurando errores
 

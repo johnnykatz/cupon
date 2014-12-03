@@ -16,8 +16,7 @@ class DefaultController extends Controller
 	{
 		$em = $this->getDoctrine()->getManager();
 		$oferta = $em->getRepository('OfertaBundle:Oferta')->findOneBy(array(
-			'ciudad'=>1,			
-			'fechaPublicacion'=> new \DateTime("now")ddddd));
+			'ciudad'=>1));
 		return $this->render(
 			'OfertaBundle:Default:portada.html.twig',
 			array('oferta'=>$oferta)
