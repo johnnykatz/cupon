@@ -14,10 +14,10 @@ class DefaultController extends Controller
     }
     public function portadaAction()
 	{
-		$em=$this->getDoctrine()->getManager();
+		$em = $this->getDoctrine()->getManager();
 		$oferta = $em->getRepository('OfertaBundle:Oferta')->findOneBy(array(
-			'ciudad'=>1,
-			'fecha_publicacion'=> new \DateTime('today')));
+			'ciudad'=>1,			
+			'fechaPublicacion'=> new \DateTime("now")ddddd));
 		return $this->render(
 			'OfertaBundle:Default:portada.html.twig',
 			array('oferta'=>$oferta)

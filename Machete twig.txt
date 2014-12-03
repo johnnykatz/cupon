@@ -4,4 +4,9 @@ etiquetas de twig
 • {% y %} para añadir lógica en la plantilla.
 • {# y #} para incluir un comentario.
 
+
+path(param1,param2) sirve para generar las url, param 1 es el nombre de la ruta ejemplo "pagina_estatica" . segundo parametro son las variables ej path("ruta_estatica","pagina":"ayuda").
+
+asset()  sirve para generar URL publica del elemento que se le pasa. la carpeta ública seria web/ .
+
 pag 547
