@@ -37,5 +37,5 @@ ejecutar $ php app/console doctrine:mapping:import OfertaBundle annotation
 OfertaBundle es el bundle donde se van a creaqr las clases (luego tendre que acomodar donde las quiero tener) y annotation 
 es el formato utilizado para iondicar tipo de datos entre otros.
 luego para generar los getters y setters $ php app/console doctrine:generate:entities OfertaBundle
-
+pag 118
 

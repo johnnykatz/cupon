@@ -3,3 +3,5 @@ etiquetas de twig
 • {{ y }} para mostrar el valor de una variable.
 • {% y %} para añadir lógica en la plantilla.
 • {# y #} para incluir un comentario.
+
+pag 547
