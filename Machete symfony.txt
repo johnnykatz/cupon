@@ -1,0 +1,41 @@
+formato de rutas
+
+bundle:controlador:accion
+TiendaBundle:Default:ayuda
+ejecuta el metodo ayudaAction() del archivo DefaultController.php qeu esat en el bundle TiendaBundle.
+
+Generar getters y setters automaticamente
+$ php app/console generate:doctrine:entities TiendaBundle
+
+Generar toda la clase desde cero
+
+$ php app/console doctrine:generate:entity   seguir los pasos y luego arregar los campos que tengan referencias.
+el primer paso es el nombre del bundle seguido de la entidad  ej. UsuarioBundle:Usuario
+
+crear base de datos despues de haber creado todas las clases
+php app/console doctrine:database:create //crea una base de datos para la base de datos qeu configuramos en el archivo
+parameters.yml en app/config
+
+crear la estructura de tablas de la BD  
+php app/console doctrine:schema:create
+
+actualizar BD con cambios en la estructura realizados en las clases
+php app/console doctrine:schema:update --force
+si queremos ver las consultas antes de ejecutarlas 
+php app/console doctrine:schema:update --dump-sql
+
+CARGAR LOS FIXTURES DE DATOS
+php app/console doctrine:fixtures:load   d:f:l
+si queremos que se reinicien los id agregamos al final --purge-with-truncate
+para no borrar los datos existentes gregamos al final --append
+si queremos cargar un determinado archivo de datos agregamos al final --fixtures=path/del/archivo
+ej.php app/console doctrine:fixtures:load --fixtures=app/Resources
+
+CON DOCTRINE2 SE PUEDE HACER INGENIERÍA INVERSA Y CREAR LAS CLASES A PARTIR DE LA BD
+configurar los parametros de la BD existente
+ejecutar $ php app/console doctrine:mapping:import OfertaBundle annotation
+OfertaBundle es el bundle donde se van a creaqr las clases (luego tendre que acomodar donde las quiero tener) y annotation 
+es el formato utilizado para iondicar tipo de datos entre otros.
+luego para generar los getters y setters $ php app/console doctrine:generate:entities OfertaBundle
+
+

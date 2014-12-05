@@ -3,7 +3,7 @@
 // src/Cupon/TiendaBundle/Entity/Tienda.php
 namespace Cupon\TiendaBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
-
+use Cupon\OfertaBundle\Util\Util;
 /** @ORM\Entity */
 
 class Tienda
@@ -50,7 +50,7 @@ class Tienda
     public function setNombre($nombre)
     {
         $this->nombre = $nombre;
-
+        $this->slug = Util::getSlug($nombre);
         return $this;
     }
 

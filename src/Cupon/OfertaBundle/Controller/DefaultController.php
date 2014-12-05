@@ -12,4 +12,16 @@ class DefaultController extends Controller
     	//return new Response('Ayuda');   
     	return $this->render('OfertaBundle:Sitio:ayuda.html.twig');    
     }
+    public function portadaAction()
+	{
+		$em=$this->getDoctrine()->getManager();
+		$oferta = $em->getRepository('OfertaBundle:Oferta')->findOneBy(array(
+			'ciudad'=>1,
+			'fecha_publicacion'=> new \DateTime('today')));
+		return $this->render(
+			'OfertaBundle:Default:portada.html.twig',
+			array('oferta'=>$oferta)
+			);
+		
+	}
 }
