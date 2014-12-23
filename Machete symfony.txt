@@ -46,5 +46,5 @@ php app/console cache:clear --env=prod --no-debug
 
 Ejecutar comando en determinado entorno
 --env=prod  al final de cada comando. si no se pone nada se sobreentiende que se ejecuta en entorno dev
-pag 129 depurando errores
+pag 154 funcionamiento interno de symfony
 

@@ -20,5 +20,10 @@ p_paginas_estaticas:
     defaults: { _controller: FrameworkBundle:Template:template }
 
 portada:
-    path: /
+    path: /{ciudad}
     defaults: { _controller: OfertaBundle:Default:portada }
+
+
+_portada:
+    path: /
+    defaults: { _controller: FrameworkBundle:Redirect:redirect, route: portada, ciudad: '%cupon.ciudad_por_defecto%' }
